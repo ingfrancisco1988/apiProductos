@@ -4,10 +4,11 @@ import java.io.Serializable;
 
 public class DtoProducto implements Serializable {
   private Integer idProducto;
-  private Integer codigoProducto;
+  private Integer codProducto;
   private  String nombreProducto;
   private String descripcionProducto;
   private Integer precioProducto;
+
 
   public Integer getIdProducto() {
     return idProducto;
@@ -17,12 +18,12 @@ public class DtoProducto implements Serializable {
     this.idProducto = idProducto;
   }
 
-  public Integer getCodigoProducto() {
-    return codigoProducto;
+  public Integer getCodProducto() {
+    return codProducto;
   }
 
-  public void setCodigoProducto(Integer codigoProducto) {
-    this.codigoProducto = codigoProducto;
+  public void setCodProducto(Integer codProducto) {
+    this.codProducto = codProducto;
   }
 
   public String getNombreProducto() {

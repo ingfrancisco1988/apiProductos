@@ -6,29 +6,24 @@ import javax.persistence.*;
 
 
 @Entity
-
-@Table(name="PRODUCTOS")
+@Table(name="Productos")
 public class Producto  {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "id", unique = true, nullable = false)
+  @JsonProperty("idProducto")
   private Integer idProducto;
 
-
-  @JsonProperty("Codigo_producto")
-  @Column(name = "cod_producto")
+  @JsonProperty("Cod_Producto")
   private Integer codProducto;
 
   @JsonProperty("Nombre_Producto")
-  @Column(name = "nombre_producto")
   private String nombreProducto;
 
-  @JsonProperty("Descipcion_producto")
-  @Column(name = "descipcion_producto")
+  @JsonProperty("Descripcion_Producto")
   private String descripcionProducto;
 
   @JsonProperty("Precio_Producto")
-  @Column(name = "precio_producto")
   private Integer precioProducto;
 
   //Declaracion de metodos
