@@ -52,4 +52,15 @@ public class ProductoService {
   {
     productoRepository.deleteById(id);
   }
+
+  public Producto updateProduct(Integer id, DtoProducto dtoProducto)
+  {
+    Producto producto= productoRepository.getOne(id);
+
+    producto.setCodProducto(dtoProducto.getCodProducto());
+    producto.setNombreProducto(dtoProducto.getNombreProducto());
+    producto.setDescripcionProducto(dtoProducto.getDescripcionProducto());
+    producto.setPrecioProducto(dtoProducto.getPrecioProducto());
+    return productoRepository.save(producto);
+  }
 }
